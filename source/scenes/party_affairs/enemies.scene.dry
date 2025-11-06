@@ -13,7 +13,7 @@ In our media and propaganda materials, who should we consider as our main oppone
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The militant parties of the far right and left - the KPD, NSDAP, and DNVP.
+- @anti_dem: The militant parties - KPD, NSDAP, and DNVP.
 - @far_right: The other fascists - the NSDAP and DNVP.
 - @nsdap: The NSDAP alone.
 - @kpd: The heroes of the working class - KPD.
