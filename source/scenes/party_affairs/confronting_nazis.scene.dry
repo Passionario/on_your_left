@@ -42,7 +42,9 @@ view-if: nazi_urgency >= 3 and iron_front_formed == 0
 on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_spd += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5
 achievement: eiserne_front
 
-The Nazi threat can no longer be ignored, although that won't stop us from trying. We must build a new organization to discuss them - the Iron Front - consisting of the SPD, the ADGB trade union clique, and the pretentiously named *Reichsbanner Schwarz-Rot-Gold*. Our overpaid consultants have designed a new symbol - the Three Arrows, pointing down towards the left. They have assured us that Nazis are superstitionist cowards who will run away at the sight of it, sparing us the terrifying effort of actually confronting them.
+The Nazi threat can no longer be ignored, although that won't stop us from trying. We must build a new organization to discuss them - the Iron Front - consisting of the SPD, the ADGB trade union clique, and *Reichsbanner Schwarz-Rot-Gold*. 
+
+Our overpaid consultants have designed a new symbol - the Three Arrows, pointing down towards the left. They have assured us that Nazis are superstitionist cowards who will run away at the sight of it, sparing us the terrifying effort of actually confronting them.
 
 What do the three arrows pointing down stand for?
 
