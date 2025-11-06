@@ -9,38 +9,44 @@ tags: party_affairs
 
 = Choosing our enemies
 
-In our media and campaign materials, who should we consider as our main opponents?
+In our media and propaganda materials, who should we consider as our main opponents?
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the KPD, NSDAP, and DNVP.
-- @far_right: The far right - the NSDAP and DNVP.
+- @anti_dem: The militant parties of the far right and left - the KPD, NSDAP, and DNVP.
+- @far_right: The other fascists - the NSDAP and DNVP.
 - @nsdap: The NSDAP alone.
-- @kpd: The KPD.
-- @bourgeois: The bourgeois parties - the Center and DVP.
+- @kpd: The heroes of the working class - KPD.
+- @bourgeois: The other bourgeois parties - the Center and DVP.
+- @spd: Ourselves - the SPD.
 - @easy_discard
 
 @anti_dem
 on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_kpd -= 2; workers_nsdap -= 2; workers_dnvp -= 2; kpd_relation -= 10
 
-Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the KPD in the future.
+Every accusation is a confession, so we reaffirm our reputation of being social fascists by falsely accusing the KPD of being no different than fascists. Some of our liberals are turned off by this, but most of the party gleefully embraces the hatred of the working class.
 
 @far_right
 on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_nsdap -= 3; workers_dnvp -= 3;
 
-Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the KPD. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
+Attacking the other fascists is popular among the entire party, although some of us would rather hate everyone equally. Our bourgeois coalition partners are also skeptical of our lackluster commitment to the murder and exploitation of the working class.
 
 @nsdap
 on-arrival: enemies = "NSDAP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_nsdap -= 4;
 
-[? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
+[? if nazi_urgency == 0 or nsdap_r < 10 : The NSDAP is a tiny party right now, even less relevant that ourselves. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and nsdap_r >= 10 : We are slowly realizing that the Nazis are a bigger problem than we thought. ?]
 
 @kpd
 on-arrival: enemies = "KPD"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; kpd_relation -= 15; dvp_relation += 5; z_relation += 5; workers_kpd -= 4;
 
-Attacking the KPD is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the KPD, this may not be the best choice.
+We are the scions of Ebert and Noske, so attacking the real working class party is second nature to us. The bourgeois parties will not reward us, but we will lick their boots anyway. 
 
 @bourgeois
 on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; dvp_relation -= 5; z_relation -= 5; kpd_relation += 5; reformist_dissent += 8; workers_z -= 3; coalition_dissent += 1
 
-Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
+Appropriating anti-bourgeois rhetoric from the KPD is popular among the left, but unless we take real action to oppose them, our words amount to little more than vigorous flirting.
+
+@spd
+on-arrival: enemies = "ourselves"; left_dissent += 15; center_dissent += 15; reformist_dissent += 15; labor_dissent +=15; neorevisionist_dissent += 15
+
+We hate ourselves and we can't govern. All we do is arrange circular firing squads for each other, betray the working class, collect donations and lie.
