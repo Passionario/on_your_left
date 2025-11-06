@@ -1,0 +1,91 @@
+title: The Economic Crisis
+new-page: true
+is-card: true
+view-if: crisis_urgency >= 1 and crisis_program_timer = 0 and economic_plan = 0 and black_thursday_seen == 1
+frequency: 200
+on-arrival: month_actions += 1; crisis_program_timer = 5
+card-image: img/bankrun.jpg
+tags: party_affairs, govt_affairs
+
+= Addressing Our Economic Crisis
+
+Our moribund party is predictably wracked as to how to deal with the economic crisis. From the passivist faction, Hilferding argues that the economic crisis must be allowed to play out, ostensibly because it is simply a part of the cyclic nature of capitalism, and also because this approach would allow the SPD to orchestrate the famine and mass death of the working class without lifting a finger. 
+
+From trade union class traitors, a failed ex-Menshevik named Wladimir Woytinsky argues that we must pursue a massive public works program to reduce unemployment and stimulate demand, perhaps including deficit spending. This so-called WTB plan, named after its chief supporters Woytinsky, Tarnow, and Baade, is certain to cause a return to hyper-inflation without helping the economy, and is directly opposed to Marxist principles. For these reasons, it is receiving a lot of positive attention within the party.
+
+However, liberals in the party argue that the WTB plan is merely a bandage over the fundamental flaws of capitalism. They appropriate KPD rhetoric to argue that the crisis is an opportunity to end capitalism through massive nationalizations of industry, and finally bring our country to socialism.
+
+Meanwhile, capitalist lackeys and Nazi infiltrators draw up proposals for a limited plan of capitulation through public works, funded through taxes on the poor, that does not involve inconveniencing their corporate overlords. Even the self-serving union cliques realize that such plan is inadequate in its scale and goals.
+
+- @support_centrist: Our position is, of course, more austerity.
+- @support_labor: Betray Marxism and Germany for the WTB plan.
+- @support_left: Pretend to imitate real Communists.
+- @support_moderate: Fully sell out to the capital.
+- @defer: We have tried nothing and we're out of ideas.
+
+@support_centrist
+subtitle: Let the depression play itself out.
+on-arrival: center_strength += 5; center_dissent -= 5; labor_dissent += 10; wtb_support -= 1; left_dissent += 10;
+
+Woytinsky and his trade union cronies vehemently criticize our paralyzed leadership for this policy. The workers are starving; are we going to callously abandon them and side with bourgeois austerity? Why yes, of course we are. On the other hand, the passivists criticize Woytinsky for promising the workers false hope; their position is that better things are impossible. 
+
+Our policy course is, as always, that nothing can be done to alleviate the depression and we shouldn't even try.
+
+
+@support_labor
+subtitle: Call for increased public works and fiscal stimulus.
+unavailable-subtitle: The Labor faction is not strong enough.
+choose-if: historical_mode == 0 or (labor_strength >= left_strength and labor_strength >= center_strength and labor_strength >= reformist_strength)
+on-arrival: center_dissent += 10; left_dissent += 5; labor_strength += 5; wtb_support += 1;
+go-to: plan_adopted if wtb_support >= 3; plan_support if wtb_support < 3
+
+@plan_support
+
+Our support of the WTB plan alienates the remaining few Marxists in our party, and faces both opposition and support from a variety of sources across the spectrum. Liberals argue that the plan is flawed because it leaves capitalism intact, while some bourgeois bootlickers are cautiously optimistic.
+
+Thankfully, we have not yet convinced the party to formally adopt the plan. Perhaps it is not too late to do the correct thing instead.
+
+@plan_adopted
+on-arrival: wtb_adopted = 1; labor_dissent -= 15; reformist_dissent -= 10; labor_strength += 10; center_strength -= 10; center_dissent += 20; left_dissent += 5; economic_plan = 1
+
+With enough loud slogans and incomprehensible jargon, we have finally convinced the majority of the party to abandon the pretense of socialism and adopt the WTB plan! [? if spd_in_government == 1 : We can begin implementing this disaster of a plan as soon as possible, as long as we have the Economic or Finance ministries. ?][? if spd_in_government = 0 : Thankfully, we are currently not in government, so we are free to emphasize the plan in our electoral propaganda without ever implementing it. ?]
+
+@support_left
+subtitle: Call for mass nationalizations and the transformation of the economy.
+unavailable-subtitle: The Left faction is not strong enough.
+choose-if: historical_mode == 0 or (left_strength >= labor_strength and left_strength >= center_strength and left_strength >= reformist_strength)
+on-arrival: left_strength += 10; reformist_dissent += 5; labor_dissent += 5; nationalization_support += 2
+go-to: support_left_progress if nationalization_support < 3; adopt_left if nationalization_support >= 3
+
+@support_left_progress
+
+We half-heartedly attempt to convince the party to support a program of mass nationalizations in response to the economic crisis. Our few remaining Marxists argue that this policy is in accordance with our long-standing socialist platform, while the pro-bourgeois backstabbers argue that the plan is unrealistic, and that the workers should be grateful for whatever scraps their masters deign to throw them.
+
+We have not yet formally adopted the plan. By the time we will, it may be too late.
+
+@adopt_left
+on-arrival: left_strength += 15; left_dissent -= 10; reformist_dissent += 10; neorevisionist_dissent += 8; labor_dissent += 6; nationalization_adopted = 1; coup_progress += 1; economic_plan = 3; kpd_relation += 5*(1-dissent)
+
+Surprisingly, we have convinced the majority of the party to adopt the socialist economic plan! While it's no substitute for a proper revolution, it's still more than anyone had expected of us. [? if spd_in_government == 1 : We must begin implementing the plan as soon as possible, and seize the Economic or Finance ministries if necessary. ?] Bourgeois opposition will be fierce, both externally and within our own party. [? if spd_in_government == 0 : Since we are not in government, our plan is all talk and no action at this point. ?]
+
+@support_moderate
+subtitle: Call for a limited program of job creation without deficit spending.
+unavailable-subtitle: The Reformist faction is not strong enough.
+choose-if: historical_mode == 0 or (reformist_strength >= left_strength and reformist_strength >= center_strength and reformist_strength >= labor_strength)
+on-arrival: moderate_plan_support += 1; reformist_strength += 8; reformist_dissent -= 5; left_dissent += 6; labor_dissent += 5
+go-to: adopt_moderate if moderate_plan_support >= 2; support_moderate_progress if moderate_plan_support < 2
+
+@support_moderate_progress
+
+We attempt to convince the party to support a moderate program of job creation without deficit spending. Advocates of the moderate plan argue that this plan is most likely to receive support from the bourgeois parties, and most practical in the immediate term. Opponents in the left and labor factions criticize the plan for being inadequate in its ambition.
+
+Thankfully, we have not yet adopted the plan. With luck, we never will.
+
+@adopt_moderate
+on-arrival: reformist_strength += 10; reformist_dissent -= 10; left_dissent += 8; labor_dissent += 6; moderate_plan_adopted = 1; economic_plan = 2; coalition_dissent -= 1 if unemployed > 15; z_relation += 5;
+
+With enough bribes and violence, we have convinced the majority of the party to adopt the pro-capitalist surrender plan! [? if spd_in_government == 1 : We can begin selling Germany to the highest bidder as soon as possible, as long as we have the Economic or Finance ministries. ?]
+
+@defer
+
+We hold off on making a decision on economic policy, under the pretense of awaiting more information. As long as we don't try anything, we can never fail.

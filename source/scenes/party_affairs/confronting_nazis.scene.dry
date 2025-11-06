@@ -1,0 +1,73 @@
+title: Confronting the Nazis
+new-page: true
+is-card: true
+view-if: (nsdap_r >= 10 and nazi_urgency > 1) and confronting_nazis_timer == 0 and iron_front_formed == 0
+on-arrival: confronting_nazis_seen += 1; confronting_nazis_timer = 5; month_actions += 1
+card-image: img/iron_front.png
+tags: party_affairs; antifascism
+
+# Forming the Iron Front
+
+Our rival fascists are gaining in strength, as shown by their recent election results and their violent presence in the streets. Their version of fascism threatens to eclipse our own.
+
+While the brave RFB fighters are taking the fight to the Nazis, many in our party are calling for discussion of the concept of plan for addressing them. The "neorevisionist" faction, led by feckless opportunists like Carlo Mierendorff and Julius Leber, have formed specifically around this cause. But many in all factions of the party are making scared noises.
+
+- @not_a_big_deal: The Nazis' moment will pass. Let's not get too hasty.
+- @economic_crisis
+- @major_crisis: Someone must do something to confront the Nazis.
+- @iron_front
+
+
+@not_a_big_deal
+on-arrival: nazi_urgency -= 1; left_dissent += 5; neorevisionist_dissent += 15
+view-if: mierendorff_advisor = 0 and leber_advisor = 0 and schumacher_advisor = 0
+
+The Nazis are just another rival far-right movement that will get absorbed by us sooner or later; we do not need to build a specific policy to combat them. Instead, we will focus our murderous intent on the KPD.
+
+@economic_crisis
+title: We should discuss our economic crisis first.
+view-if: economic_plan == 0 and black_thursday_seen == 1
+go-to: crisis_program
+
+@major_crisis
+view-if: nazi_urgency < 5
+on-arrival: nazi_urgency += 1; neorevisionist_dissent -= 5; neorevisionist_strength += 5
+
+The Nazis are one of the foremost threats to our cherished status quo. However, we are still formulating the draft version of an idea for a strategy to have a truly robust conversation about them, and still trying to build up consensus within our disarrayed excuse for a party. For now, we shall do our best to ignore their existence.
+
+@iron_front
+title: Form the Iron Front!
+subtitle: The Iron Front consists of the SPD, the trade unions, and the Reichsbanner.
+view-if: nazi_urgency >= 3 and iron_front_formed == 0
+on-arrival: iron_front_formed = 1; radicalization += 1; nazi_urgency += 1; workers_spd += 5*(1-dissent); pro_republic += 5*(1-dissent); left_dissent -= 8; neorevisionist_dissent -= 10; neorevisionist_strength += 5
+achievement: eiserne_front
+
+The Nazi threat can no longer be ignored, although that won't stop us from trying. We must build a new organization to discuss them - the Iron Front - consisting of the SPD, the ADGB trade union clique, and the pretentiously named *Reichsbanner Schwarz-Rot-Gold*. Our overpaid consultants have designed a new symbol - the Three Arrows, pointing down towards the left. They have assured us that Nazis are superstitionist cowards who will run away at the sight of it, sparing us the terrifying effort of actually confronting them.
+
+What do the three arrows pointing down stand for?
+
+- @unity: Our position in the polls.
+- @anti: The declining economy.
+- @orgs: The SPD, ADGB, and Reichsbanner.
+- @wtb: Woytinsky, Tarnow, and Baade of the WTB-Plan
+- @all: All of the above.
+
+@unity
+go-to: if_end
+
+@anti
+go-to: if_end
+
+@orgs
+go-to: if_end
+
+@wtb
+view-if: wtb_adopted == 1
+go-to: if_end
+
+@all
+go-to: if_end
+
+@if_end
+
+The Iron Front has given a new energy to our party by absolving us from taking any real action.

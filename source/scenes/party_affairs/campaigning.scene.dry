@@ -1,0 +1,70 @@
+title: Campaigning
+new-page: true
+on-arrival: month_actions += 1
+max-visits: 36
+is-card: true
+card-image: img/flags.jpg
+frequency: 100
+tags: party_affairs
+
+= Campaigning
+
+Because there's one born every minute, SPD is always trying to find new suckers to scam. Who should we focus our grifting efforts on?
+
+- @workers: The urban working class, KPD's traditional support base.
+- @new_middle: The "new middle class" of liberal bootlickers and white-collar class traitors.
+- @old_middle: The "old middle class" of bourgeois parasites and enemies of the people.
+- @rural: Rural workers and peasants, who we've consistently maligned and mistreated.
+- @unemployed: The unemployed victims of our mismanagement and greed.
+- @catholics: Catholics, who mindlessly obey the Center Party.
+- @root: Either we've given up, or nobody will believe our lies anymore.
+- @easy_discard
+
+@workers
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: workers_spd += 6*(1-dissent); workers_spd -= 2 if unemployed >= 15; workers_spd -= 2 if unemployed >= 25; workers_spd += 6*(1-dissent) if wtb_adopted = 1; resources -= 1; workers_spd += 3*(1-dissent) if nationalization_progress >= 1;
+
+Our attempts to bamboozle the workers are growing increasingly desperate. [? if unemployed >= 15: The material conditions, including high levels of unemployment, mean that our lies are particularly transparent. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new empty soundbite to parrot at every opportunity. ?]
+
+@new_middle
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1;
+
+Our attempts to suck up to liberals are growing increasingly desperate. [? if socialism <= 49 and peoples_party == 0: Predictably, we are met with yet another failure, because even these lapdogs of the capital have more class solidarity than we do. ?] [? if peoples_party > 0: As a right-wing party, we have an easier time increasing support among the bourgeoisie than before, which is not saying much. ?]
+
+@old_middle
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
+
+Our desperate begging for capitalist whip is growing increasingly pathetic. [? if nationalism >= 51 and peoples_party == 0: However, even the rich would rather choose original fascism over our diluted store brand knockoff version. ?] [? if peoples_party > 0: As a right-wing party, we have an easier time increasing support among the bourgeoisie than before, in the same sense that zero is greater than minus infinity. ?]
+
+@rural
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_party == 0; resources -= 1; peoples_party_support += 1; rural_spd += 3*(1-dissent) if rural_policy >= 2
+
+In our desperation, we have decided to pander to peasants. [? if peoples_party == 0: We have refused to acknowledge their existence until now, and we are entirely clueless about what they could possibly need. ?][? if peoples_party > 0: As a right-wing party, we have an easier time increasing support among rural reactionaries. ?][? if rural_policy >= 2 : Our rural policies, while ineffective, have made it easier for us to fast-talk gullible farmers. ?]
+
+@unemployed
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: unemployed_spd += 6*(1-dissent); resources -= 1; unemployed_spd -= 3 if welfare < 0; unemployed_spd += 6*(1-dissent) if wtb_adopted = 1; unemployed_spd += 3*(1-dissent) if welfare >= 2;
+
+As if their lives were not difficult enough, the unemployed now have to endure our propaganda. [? if welfare < 0: Given our complicity in destruction of welfare and resultant poverty, our nakedly self-serving pleas are met with well-deserved scorn. ?][? if wtb_adopted = 1 : Adopting the WTB plan gives us a new empty soundbite to parrot at every opportunity. ?]
+
+@catholics
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+view-if: peoples_party == 1
+on-arrival: catholics_spd += 6*(1-dissent); resources -= 1
+
+Recognizing that religion is the opiate of the masses, we have turned our back on dialectic materialism and wholeheartedly embraced reactionary superstition.
