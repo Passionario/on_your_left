@@ -47,6 +47,7 @@ The miniscule remnants of the Democratic Party (now called the German State Part
 
 
 @support_thalmann
+subtitle: This is the correct option.
 choose-if: kpd_relation >= 50 and reformist_strength < left_strength
 unavailable-subtitle: [? if kpd_relation < 50 : We do not have good enough relations with the Communists, so they are not even willing to accept our support. ?] [? if reformist_strength >= left_strength : The reformist faction is able to dissuade the party from supporting this arrangement. ?]
 
