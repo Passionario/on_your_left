@@ -8,43 +8,31 @@ face-image: img/redfront.jpg
 
 = May Day, 1929
 
-Tensions run high in Berlin. The Communists are planning a demonstration to commemorate the 10th anniversary of the Spartacist Uprising. No one has forgotten that it was our party members who ordered the uprising's suppression, and the Communists still blame us for the deaths of Rosa Luxemburg and Karl Liebknecht.
+The Communists are planning a demonstration to commemorate the 10th anniversary of the Spartacist Massacre. No one has forgotten that it was our party who ordered the uprising's brutal suppression, and the Communists still correctly blame us for the deaths of Rosa Luxemburg and Karl Liebknecht.
 
-Many non-communists are afraid of the possibility of another violent uprising, and our allies in the Prussian coalition are asking the Prussian Interior Ministry to ban the demonstrations.
+Many non-communists are afraid of workers finding their voice, so our allies in the Prussian coalition are asking the Prussian Interior Ministry to suppress the demonstrations with lethal force.
 
-- @ban: Ban the demonstrations.
+- @ban: Ban the peaceful protests and send police to shoot anyone who tries.
 - @allow_police: Allow the demonstrations to proceed, but maintain a heavy police presence.
 - @allow: Allow the demonstrations to proceed.
-- @join: Join in the demonstrations ourselves.
+- @join: Hijack the demonstrations and make them about ourselves.
 
 @ban
+subtitle: <span style="color: #700000;">Don't do this.</span>
 on-arrival: blutmai = 1; kpd_relation -= 25; z_relation += 5; dvp_relation += 5; workers_spd -= 3; unemployed_spd -= 3; workers_kpd += 3; unemployed_kpd += 3; communist_coalition -= 3; strife += 1
 face-image: img/blutmai.jpg
 
-We issued the order to ban the demonstrations, and sent police to enforce the ban. There was a confrontation between the police and Communists, and violence erupted. Reports say that the Berlin police killed dozens of demonstrators and innocent bystanders. The Communists are already calling this incident *Blutmai*, "Bloody May".
+We issued the order to ban the demonstrations, and sent police to enforce the ban. The police has arrived and immediately opened fire on demonstrators and innocent bystanders <span style="color: #700000;">such as myself</span>
 
-This may end any attempt at reconciliation with the KPD, but the Center and People's parties approve of our action.
+<span style="color: #700000;">they are killing everyone they've shot a child oh no I'm next</span>
 
-- @corrupt_police: It is the fault of corrupt and reactionary elements within the police. Purge those responsible.
-- @communist_fault: It is the fault of the Communists for refusing to follow the rule of law.
-- @no_fault: It is an unfortunate incident that should not have happened, but is no one's fault at all.
+- @narrator_dies: <span style="color: #700000;">it hurts it hurts it hurts</span>
 
-@corrupt_police
-on-arrival: kpd_relation += 10; z_relation -= 2; dvp_relation -= 2; prussian_police_loyalty += 0.05
+@narrator_dies
+subtitle: You've killed the narrator! What did you think would happen?
+game-over: true
 
-We arrested the police responsible for the killings, and put them on trial. [? if judicial_reform = 0 : Unfortunately, the reactionary judiciary let them go free with barely any punishment at all. ?]
-
-This assuages some of the Communists' outrage, but certainly not all.
-
-@communist_fault
-on-arrival: kpd_relation -= 10; z_relation += 5; dvp_relation += 5; rfb_strength -= 80; rfb_banned = 1
-
-If the KPD continues to act illegally, they must suffer the consequences. Thus, we have banned the RFKB, their paramilitary group. The bourgeois and right-leaning parties approve.
-
-@no_fault
-
-This position gains us no allies, and does not alienate anyone any further.
-
+The end. No moral.
 
 @allow_police
 on-arrival: kpd_relation += 5; workers_kpd += 5; unemployed_kpd += 5
