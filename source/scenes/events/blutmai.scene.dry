@@ -18,18 +18,18 @@ Many non-communists are afraid of workers finding their voice, so our allies in 
 - @join: Hijack the demonstrations and make them about ourselves.
 
 @ban
-subtitle: <span style="color: #700000;">Don't do this.</span>
+subtitle: <span style="color: #700000;">don't do this</span>
 on-arrival: blutmai = 1; kpd_relation -= 25; z_relation += 5; dvp_relation += 5; workers_spd -= 3; unemployed_spd -= 3; workers_kpd += 3; unemployed_kpd += 3; communist_coalition -= 3; strife += 1
 face-image: img/blutmai.jpg
 
 We issued the order to ban the demonstrations, and sent police to enforce the ban. The police has arrived and immediately opened fire on demonstrators and innocent bystanders <span style="color: #700000;">such as myself</span>
 
-<span style="color: #700000;">they are killing everyone they've shot a child oh no I'm next</span>
+<span style="color: #700000;">they've shot a child they're killing everyone oh no I'm next</span>
 
 - @narrator_dies: <span style="color: #700000;">it hurts it hurts it hurts</span>
 
 @narrator_dies
-subtitle: You've killed the narrator! What did you think would happen?
+subtitle: You've killed the KPD narrator! What did you think would happen?
 game-over: true
 
 The end. No moral.
@@ -37,13 +37,13 @@ The end. No moral.
 @allow_police
 on-arrival: kpd_relation += 5; workers_kpd += 5; unemployed_kpd += 5
 
-The demonstration proceeds peacefully under the watchful eyes of the police. Onlookers admire the strength of the Communist workers, and perhaps some of our supporters have been peeled off.
+The demonstration proceeds peacefully under the watchful eyes of the police. Onlookers admire the strength of the Communist workers, and some of our supporters have seen the light.
 
 
 @allow
 on-arrival: workers_kpd += 5; unemployed_kpd += 5; kpd_relation += 10; rfb_strength += 50; z_relation -= 3; dvp_relation -= 3; coalition_dissent += 1; rfb_militancy += 0.1
 
-The demonstration proceeds peacefully, with a minimal police presence. Onlookers admire the strength of the Communist workers, and perhaps some of our members have been peeled off. The KPD will never admit it, but they are developing a less hostile view towards us (even if they do not *like* us yet). Our centrist allies denounce the demonstration, but their cries are ineffectual.
+The demonstration proceeds peacefully, with a minimal police presence. Onlookers admire the strength of the Communist workers, and some of our members have defected. Our centrist allies and members denounce the demonstration, but their cries are ineffectual.
 
 
 @join
@@ -52,4 +52,4 @@ unavailable-subtitle: The Communists do not trust us enough.
 on-arrival: kpd_relation += 15; workers_kpd += 5; unemployed_kpd += 5; workers_spd += 5; unemployed_spd += 5; new_middle_spd -= 5; old_middle_spd -= 5; z_relation -= 10; dvp_relation -= 10; coalition_dissent += 2; communist_coalition += 2; rfb_strength += 100; rfb_militancy += 0.1; sa_strength += 50; sh_strength += 50
 achievement: die_rote_fahne
 
-It is difficult to persuade the Communists to let us march with them, given the histories of their party and ours. However, they eventually relent. The display of proletarian unity inspires the workers and terrifies the bourgeoisie and middle class. [? if in_grand_coalition : Our coalition partners in the government are outraged at our display with the communists, and are threatening to break up the government. ?] The far-right paramilitaries increase their recruitment to counter us.
+It is difficult to persuade the Communists to let us march with them, given the number of times we've betrayed them. However, they eventually relent. The display of proletarian unity inspires the workers and terrifies the bourgeoisie and middle class. [? if in_grand_coalition : Our coalition partners in the government are outraged at our display with the communists, and are threatening to break up the government. ?] The far-right paramilitaries increase their recruitment to counter us.
