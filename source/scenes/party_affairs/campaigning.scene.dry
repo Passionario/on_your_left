@@ -14,7 +14,7 @@ Because there's one born every minute, SPD is always trying to find new suckers 
 - @workers: The urban working class, KPD's traditional support base.
 - @new_middle: The "new middle class" of liberal bootlickers and white-collar class traitors.
 - @old_middle: The "old middle class" of bourgeois parasites and enemies of the people.
-- @rural: Rural workers and peasants, who we've consistently maligned and mistreated.
+- @rural: Land-owning junkers, rural workers and peasants.
 - @unemployed: The unemployed victims of our mismanagement and greed.
 - @catholics: Catholics, who mindlessly obey the Center Party.
 - @root: Either we've given up, or nobody will believe our lies anymore.
@@ -34,7 +34,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: new_middle_spd += 6*(1-dissent); new_middle_spd -= 4 if socialism <= 49 and peoples_party == 0; resources -= 1; peoples_party_support += 1;
 
-Our attempts to suck up to liberals are growing increasingly desperate. [? if socialism <= 49 and peoples_party == 0: Predictably, we are met with yet another failure, because even these lapdogs of the capital have more class solidarity than we do. ?] [? if peoples_party > 0: As a right-wing party, we have an easier time increasing support among the bourgeoisie than before, which is not saying much. ?]
+Our attempts to suck up to liberals are growing increasingly desperate. [? if socialism <= 49 and peoples_party == 0: Predictably, we are met with yet another failure, because even these lapdogs of the capital have more class solidarity than we do. ?] [? if peoples_party > 0: As an openly center-right party, we have an easier time increasing support among the bourgeoisie than before, which is not saying much. ?]
 
 @old_middle
 subtitle: -1 resources
@@ -42,7 +42,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: old_middle_spd += 5*(1-dissent); resources -= 1; old_middle_spd -= 3 if nationalism >= 51 and peoples_party == 0; peoples_party_support += 1
 
-Our desperate begging for capitalist whip is growing increasingly pathetic. [? if nationalism >= 51 and peoples_party == 0: However, even the rich would rather choose original fascism over our diluted store brand knockoff version. ?] [? if peoples_party > 0: As a right-wing party, we have an easier time increasing support among the bourgeoisie than before, in the same sense that zero is greater than minus infinity. ?]
+Our desperate begging for capitalist whip is growing increasingly pathetic. [? if nationalism >= 51 and peoples_party == 0: However, even the rich would rather choose original fascism over our diluted store brand knockoff version. ?] [? if peoples_party > 0: As an openly center-right party, we have an easier time increasing support among the bourgeoisie than before, in the same sense that zero is greater than minus infinity. ?]
 
 @rural
 subtitle: -1 resources
@@ -50,7 +50,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: rural_spd += 5*(1-dissent); rural_spd -= 3*(1-dissent) if peoples_party == 0; resources -= 1; peoples_party_support += 1; rural_spd += 3*(1-dissent) if rural_policy >= 2
 
-In our desperation, we have decided to pander to peasants. [? if peoples_party == 0: We have refused to acknowledge their existence until now, and we are entirely clueless about what they could possibly need. ?][? if peoples_party > 0: As a right-wing party, we have an easier time increasing support among rural reactionaries. ?][? if rural_policy >= 2 : Our rural policies, while ineffective, have made it easier for us to fast-talk gullible farmers. ?]
+In our desperation, we have decided to split our pandering between rich landowners and peasants. [? if peoples_party == 0: We have refused to acknowledge their existence until now, and we are entirely clueless about what they could possibly need. ?][? if peoples_party > 0: As an openly center-right party, we have an easier time increasing support among rural reactionaries. ?][? if rural_policy >= 2 : Our rural policies, while ineffective, have made it easier for us to fast-talk gullible farmers. ?]
 
 @unemployed
 subtitle: -1 resources
