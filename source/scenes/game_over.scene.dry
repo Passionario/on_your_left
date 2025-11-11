@@ -148,9 +148,9 @@ title: Hitler does not yet control Germany...
 tags: endings
 go-to: eg_menu
 
-Hitler does not yet control Germany. [? if chancellor == "Papen" : However, Chancellor Papen's authoritarianism and far-right politics are paving the way for Hitler, or someone like him, to take power. ?] [? if chancellor == "Schleicher" : However, Chancellor Schleicher's authoritarianism and scheming is paving the way for Hitler, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Prussian coup, the far-right appears to be ascendant. ?][? if chancellor == "Brüning" : However, Chancellor Brüning's austerity policies and the continuation of the depression are paving the way for Hitler, or someone like him, to take power. ?]
+Hitler does not yet control Germany. [? if chancellor == "Papen" : However, Chancellor Papen's authoritarianism and far-right politics are paving the way for Hitler, or someone like him, to take power. ?] [? if chancellor == "Schleicher" : However, Chancellor Schleicher's authoritarianism and scheming is paving the way for Hitler, or someone like him, to take power. ?][? if resist_coup == 1 and republic_victory == 0 and long_war == 0 and coup_victory == 0 : Given our defeat in the Prussian coup, the far-right appears to be ascendant. ?][? if chancellor == "Brüning" : However, Chancellor Brüning's austerity policies and the continuation of the depression are paving the way for Hitler, or someone like him, to take power. ?][? if chancellor_party == "SPD": However, our bourgeois sympathies and refusal to commit to revolution are paving the way for Hitler or someone like him to take power. ?]
 
-[? if hitler_deported == 1 : We have deported Hitler back to Austria. Hopefully he will never return. ?]
+[? if hitler_deported == 1 : We have deported Hitler back to Austria. Hopefully he doesn't figure out how trains work and return. Hopefully he magically becomes a law-abiding citizen and respects our decision. Hopefully no future judge will not pardon him. Yes, we have so much to hope for! ?]
 
 @nsdap_win
 view-if: chancellor == "Goebbels" or president == "Göring"
@@ -236,7 +236,7 @@ view-if: chancellor_party == "KPD" or president == "Thälmann" and total_defeat 
 tags: endings
 go-to: eg_menu
 
-The KPD has won power in Germany, with our assistance. They will try to remake Germany in the Soviet image. How much they succeed is yet to be determined.
+The KPD has won power in Germany! They will try to remake Germany in the Soviet image. This is the best ending.
 
 @works_program
 title: Works program enacted!
@@ -244,7 +244,7 @@ view-if: works_program > 0
 tags: endings
 go-to: eg_menu
 
-Our government has enacted a public works program!
+Our government has enacted a public works program. Now the workers can be exploited by the state and the capital simultaneously.
 
 @unemployment_reduced
 title: Unemployment has been reduced from its peak.
@@ -252,7 +252,7 @@ view-if: unemployed <= 20 and unemployed >= 10 and year >= 1930
 tags: endings
 go-to: eg_menu
 
-While still uncomfortably high, unemployment levels are nowhere near their peak. This is a success of our economic policy.
+While unemployment levels are nowhere near their peak, they are still very high. This is a failure of our economic policy.
 
 @unemployment_reduced_2
 title: Unemployment has been successfully reduced!
@@ -260,7 +260,7 @@ view-if: unemployed < 10 and year >= 1930
 tags: endings
 go-to: eg_menu
 
-Unemployment levels have fallen substantially! This is a success of our economic policy.
+Unemployment levels have fallen substantially, despite our economic policy.
 
 
 
@@ -279,15 +279,15 @@ view-if: in_emergency_government == 1
 tags: endings
 go-to: eg_menu
 
-The SPD is ruling as part of an emergency minority government, led by President [+ president +] and Chancellor [+ chancellor +]. This is a temporary and unstable arrangement, leaving the door open to further authoritarianism.
+The SPD is ruling as part of an emergency minority government, led by President [+ president +] and Chancellor [+ chancellor +]. This is a temporary and unstable authoritarian power grab.
 
 @peoples_party_achieved
-title: The SPD is a "People's Party".
+title: The SPD is a right-wing "People's Party".
 view-if: peoples_party == 1
 tags: endings
 go-to: eg_menu
 
-The SPD has been declared a "People's Party", representing all of the people, not just the working class. This policy has many supporters and detractors, and what will become of the party is still unclear.
+The SPD has been declared a "People's Party", no longer even pretending to represent the working class. 
 
 @nationalization_achieved
 title: Socialization of the economy has commenced.
@@ -295,7 +295,7 @@ view-if: nationalization_progress >= 2
 tags: endings
 go-to: eg_menu
 
-As part of our socialist economic plan, we have nationalized a substantial portion of the economy, beginning the transition to actual socialism.
+As part of our socialist economic plan, we have nationalized a substantial portion of the economy, beginning the transition to actual socialism. 
 
 @works_councils
 title: Works councils have more power.
@@ -311,7 +311,7 @@ view-if: eu = 1
 tags: endings
 go-to: eg_menu
 
-We have helped to form a European Union to bring peace and prosperity to the continent. Time will tell how effective it will be.
+We have helped to form a European Union to bring peace and prosperity to the European capitalists. Time will show how fast it fails.
 
 @achievements
 title: Achievements
