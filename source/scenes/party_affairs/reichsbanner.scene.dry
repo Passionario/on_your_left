@@ -10,12 +10,12 @@ max-visits: 6
 
 = Reichsbanner
 
-The *Reichsbanner Schwarz-Rot-Gold* is a mass organization for the defense of the bourgeois Republic against those who threaten the status quo. Some would call it a paramilitary, although it is less of any sort of military and more of a political discussion club. It is officially associated with the pro-democratic parties -the SPD, Center, and [+ ddp_name +], but by far the largest component is with the SPD.
+The *Reichsbanner Schwarz-Rot-Gold* is a mass organization for the defense of the bourgeois Republic against those who threaten the status quo. Some would call it a paramilitary, although it is less of any sort of military and more of a political discussion club with a Great War-sentimental aesthetic. It is officially associated with the pro-bourgeios parties -the SPD, Center, and [+ ddp_name +], but by far the largest component is with the SPD.
 
 [? if workers_spd < 46 or workers_spd < workers_nsdap or workers_spd < workers_kpd : The Reichsbanner is having a more difficult time recruiting, as the SPD is no longer the dominant party among the workers. Many of its members have left. ?]
 
-- @militant: Fund more military-style training and equipment for the Reichsbanner.
-- @militant_2: Use our existing resources to support more training for the Reichsbanner.
+- @militant: Fund more Reichswehr-style training and equipment for the Reichsbanner.
+- @militant_2: Use our existing resources to acquire more bullets for the Reichsbanner.
 - @same: Keep the Reichsbanner as it is.
 - @cut_rb: Cut funding for the Reichsbanner.
 - @women_rb
@@ -30,7 +30,7 @@ unavailable-subtitle: Not enough resources ([+ rb_militarization_cost +] needed)
 subtitle: -[+ rb_militarization_cost +] resources
 on-arrival: resources -= rb_militarization_cost; rb_investment += 1; rb_strength += 100; rb_militancy += 0.05; left_strength += 2; left_dissent -= 2; reformist_dissent += 5; spd_militancy += 0.05; workers_spd += 2*(1-dissent); unemployed_spd += 2*(1-dissent); z_relation -= 5 if historical_mode 
 
-Some in our party decry the increasing militarization of the Reichsbanner. They say it is emulating the right-wing nationalists or the communists, and risks alienating our allies in the centrist parties. On the other hand, more left-leaning radicals are being lured to our organizations, away from the communists.
+We may have campaigned for pacifism and anti-militarism in the open, but that will not stop us from indulging in occasional armed violence in private. Some in our party decry the increasing militarization of the Reichsbanner. They say it is emulating other right-wing nationalists, and risks alienating our allies in the bourgeois parties. On the other hand, more spies and police agents who were turned away from the Communists are being lured to infiltrate our organizations.
 
 [? if historical_mode : The Center Party decries the militarization of the Reichsbanner, and its members are leaving the republican organization. ?]
 
@@ -39,12 +39,12 @@ Some in our party decry the increasing militarization of the Reichsbanner. They 
 view-if: funded_reichsbanner >= 1
 on-arrival: rb_militancy += 0.02; funded_reichsbanner -= 1
 
-As we have already funded resources towards the Reichsbanner, we can invest in building up their militancy.
+As we have already funded resources away from helping the people and towards the Reichsbanner, we can invest in building up their militancy.
 
 
 @same
 
-The Reichsbanner is already serving the purpose it needs to serve. There is no reason to change what already works.
+The Reichsbanner is already serving the purpose it needs to serve: being an outlet for our membership's violent frustration with our leadership's policies. There is no reason to change what already exists.
 
 - @return: Continue...
 
@@ -66,9 +66,9 @@ go-to: homosexual if trans_rights or repealed_175 or reformed_183
 max-visits: 1
 achievement: women_reichsbanner
 
-The suggestion to allow women into the Reichsbanner is ridiculed by most, except for Toni Sender. But this is an exceptional time, and we need anyone who is willing to join. Thus, we organize specialized units for women, [? if homosexual_rights > 0: and even some covert units for transsexuals and homosexuals ?].
+Since SPD adheres to bourgeois concepts of women being private property, the suggestion to allow women into the Reichsbanner is ridiculed by most, except for Toni Sender. But this is a desperate time, and we need anyone who is willing to join. Thus, we attempt to copy Red Women's and Girls' League and organize specialized units for women, [? if homosexual_rights > 0: and even some covert units for transsexuals and homosexuals ?].
 
-After allowing women to join, the number of comrades who leave is more than balanced out by the number of radicalized women and others who join. However, many of our departed members were veterans, and many of the new members have no experience with military-style training.
+After allowing women to join, the number of chauvinists who leave is more than balanced out by the number of radicalized women and others who join. However, many of our departed members were veterans of lost wars, and many of the new members have no experience with Reichswehr-style training.
 
 @homosexual
 achievement: anders_als_die_andern
