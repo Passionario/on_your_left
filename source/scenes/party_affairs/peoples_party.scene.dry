@@ -1,4 +1,4 @@
-title: Building a People's Party
+title: Abandoning the Working Class
 new-page: true
 is-card: true
 card-image: img/poster_0.jpg
@@ -8,16 +8,16 @@ tags: party_affairs
 max-visits: 4
 #subtitle: Can the SPD move beyond the working class?
 
-= Building a People's Party
+= Abandoning the Working Class
 
-Contrary to orthodox Marxist predictions, the industrial proletariat is not constantly increasing in size. The rapid growth of the "new middle class" of white-collar workers and the persistence of small farmers and the peasantry confound predictions of a working-class majority.
+Contrary to our misunderstanding of Marxist predictions, the industrial proletariat is not constantly increasing in size. The rapid growth of the "new middle class" of white-collar workers and the persistence of small farmers and the peasantry confound our expectation of a working-class majority that would deliver us electoral victories without any organizational effort on our part. Of course, a true proletarian vanguard party would not be confounded by such considerations and would strive for revolution and liberation even when outnumbered, but the SPD is not that party.
 
-In order to build a socialist majority, many reformists and neorevisionists are calling for our party to move beyond the urban working class, to embrace the concerns of the middle class, farmers, and women of all classes. We can create a new and inclusive vision of the party that encompasses all people who work for a living, which is almost everyone in the country save the aristocrats and top capitalists.
+In order to build a social fascist majority, many reformists and neorevisionists are calling for our party to abandon the urban working class, to embrace the concerns of the middle class, farmers, and women of all classes. We can create a new and inclusive vision of the party that encompasses all people except those who work for a living, especially the aristocrats and top capitalists.
 
-- @support_peoples_party: Yes, we must become a people's party!
-- @build_support: We must build additional support before becoming a people's party.
-- @support_peoples_party_hard: Despite strong opposition from the Center and Left factions, we will become a people's party.
-- @no_new_ideas: No, we will always be a party of the working class.
+- @support_peoples_party: Yes, we must become an anti-worker party!
+- @build_support: We must build additional support before becoming an anti-worker party.
+- @support_peoples_party_hard: Despite strong opposition from internal factions, we will become an anti-worker party.
+- @no_new_ideas: No, the working class will never be free of us.
 - @root: Perhaps we can discuss this at a later time.
 - @easy_discard
 - @cancel_advisor_action
@@ -26,7 +26,7 @@ In order to build a socialist majority, many reformists and neorevisionists are 
 view-if: (neorevisionist_strength + reformist_strength < left_strength + center_strength) or peoples_party_support < 5
 on-arrival: peoples_party_support += 1; neorevisionist_strength += 5; left_strength -= 5; left_dissent += 5
 
-Within our party, we are pushing forward proposals for a people's party against the Left and Center.
+Within our party, we are pushing forward proposals for an anti-worker bourgeois party against the remaining nominal socialists.
 
 
 @support_peoples_party
@@ -35,7 +35,7 @@ unavailable-subtitle: The opposition is too strong.
 on-arrival: neorevisionist_strength += 15; reformist_strength += 15; neorevisionist_dissent -= 10; reformist_dissent -= 10; peoples_party = 1; workers_spd -= 12; rural_spd += 10; new_middle_spd += 10; old_middle_spd += 8; catholics_spd += 8; left_dissent += 25; center_dissent += 20; kpd_relation -= 10; kpd_coalition_dissent += 1; coalition_dissent -= 1; z_relation += 5*(1-dissent); dvp_relation += 5*(1-dissent)
 achievement: volkspartei
 
-In an emergency conference, we have decided to become a people's party that encompasses all of the regular people of Germany, not just the workers and urban poor. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
+In an emergency conference, we have decided to become a populist party that encompasses all of the people of Germany except the workers and urban poor. This is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all enemies of the proletariat.
 
 Should we run a new campaign to publicize our new platform?
 
@@ -53,7 +53,7 @@ view-if: (neorevisionist_strength + reformist_strength < left_strength + center_
 on-arrival: neorevisionist_strength += 10; reformist_strength += 8; peoples_party = 1; workers_spd -= 15; rural_spd += 10; new_middle_spd += 10; old_middle_spd += 8; catholics_spd += 8; left_dissent += 40; center_dissent += 40; kpd_relation -= 10; kpd_coalition_dissent += 1; coalition_dissent -= 1
 achievement: volkspartei
 
-It is an arduous and contentious process, but we have pushed through the proposal to become a people's party. The Left and Center claim that our new party platform is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all of the people, not just the proletariat.
+It is an arduous and contentious process, but we have pushed through the proposal to become an anti-worker party. This is a betrayal of our founding principles, a turn away from Marxism towards bourgeois opportunism. Whatever the case, we are now a party representing all enemies of the proletariat.
 
 Should we run a new campaign to publicize our new platform?
 
@@ -74,7 +74,7 @@ The workers are still a key part of our constituency, and we must not alienate t
 title: Campaign among the middle classes.
 on-arrival: old_middle_spd += 5*(1-dissent); new_middle_spd += 6*(1-dissent)
 
-As a people's party, we represent the employees and small businesspeople of the middle class, and they are becoming receptive to our messages.
+As an anti-worker party, we represent the employees and small businesspeople of the middle class, and they are becoming receptive to our messages.
 
 @campaign_rural
 title: Campaign in rural areas.
@@ -82,19 +82,19 @@ choose-if: rural_policy > 0
 unavailable-subtitle: We have not enacted any rural policies yet.
 on-arrival: rural_spd += 7*(1-dissent)
 
-As a people's party, we represent farmers and rural workers as well, and they are becoming receptive to our messages.
+As an anti-worker party, we represent farmers and rural workers as well, and they are becoming receptive to our messages.
 
 @campaign_unemployed
 title: Campaign among the unemployed.
 on-arrival: unemployed_spd += 6*(1-dissent);
 
-As a people's party, the urban poor are still a key part of our constituency.
+As an anti-worker party, the urban poor are still a key part of our constituency.
 
 @campaign_women
 title: Campaign among women of all classes.
 on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent);
 
-As a people's party, we represent women of all classes.
+As an anti-worker party, we represent women of all classes.
 
 @campaign_catholics
 title: Campaign among political Catholics.
