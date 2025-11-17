@@ -11,11 +11,11 @@ max-visits: 1
 
 Antisemitism has long been a latent feature of German society, but since the beginning of the economic depression, it has grown to a horrifying extent. The Nazis are the worst of it, but all the right-wing parties are deeply antisemitic. Regarding the SPD specifically, our right-wing enemies love to deploy their racist rhetoric against our many Jewish comrades, magnifying criticism of any minor transgression, and they call the entire SPD a Jewish party. 
 
-- @nothing: Our answer is, as always, to do nothing.
 - @embrace: Yes, we must become a Jewish party!
 - @if: We must build additional support before becoming a Jewish party.
 - @histori: These accusations are baseless and we have proof to the contrary!
 - @all: All Germans will suffer from fascism, not just the Jews. 
+- @nothing: Our answer is, as always, to do nothing.
 
 
 @histori
