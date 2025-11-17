@@ -8,14 +8,14 @@ card-image: img/international.jpg
 max-visits: 4
 #subtitle: Building ties with our fraternal socialist parties.
 
-At the Labor and Socialist International, we can forge contacts with other social fascist parties in Europe and across the world.
+At the Labor and Socialist International, we can commingle with other social fascist parties in Europe and across the world. Whom should we approach?
 
-- @fr_uk: Build relationships with the French SFIO and British Labour Party.
-- @austria: Learn organization and street fighting from the Austrian SDAPÖ.
-- @scandi: Learn the path of economics and reform from the Scandinavian social democrats.
+- @fr_uk: The French SFIO and British Labour Party.
+- @austria: The Austrian SDAPÖ.
+- @scandi: The Scandinavian social democrats.
+- @america: The Socialist party of America.
+- @return: No one. It's better that way.
 - @comintern: Forget the Second International - embed a spy in the Comintern's conference.
-- @america: Contact the Socialist party of America.
-- @return: We do not need international contacts at the moment.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -34,7 +34,7 @@ unavailable-subtitle: Not enough resources.
 audio: shuffle music/communist/workers_of_vienna_normalized.mp3
 on-arrival: left_strength += 5; radicalization += 1; rb_militancy += 0.03; resources -= 1; austria_relation += 1; sdapo_strength += 1 if austrian_parliament_seen = 1
 
-Our Reichsbanner can learn much in paramilitary organization and training from the Austrian Republikanischer Schutzbund (Republican Protection Units), the paramilitary branch of the Austrian social democrats.
+Our Reichsbanner can try to mimic the paramilitary organization and training of the Austrian Republikanischer Schutzbund (Republican Protection Units), the paramilitary branch of the Austrian social democrats, but we don't expect much success.
 
 [? if austrian_parliament_seen and not austrian_civil_war_seen: We are also helping the Austrian Social Democratic Worker's Party build up their resources in preparation for a future struggle, legally and illegally. The irony of doing this while historically opposing the same struggle in our own country is lost on us. ?]
 
@@ -65,4 +65,4 @@ The Socialist Party of America is tiny and has limited support. There is not muc
 
 @reduce
 
-Maybe we have our hands full trying to maintain our relevance in our own country. Maybe we have burned too many bridges. Maybe we just wasted away all of our spare funds and can't afford tickets. Whatever the case, the international stage will not have to endure us today.
+Maybe we have our hands full trying to maintain our relevance in our own country. Maybe we have burned too many bridges. Maybe we just wasted away all of our spare funds and can't afford tickets.
