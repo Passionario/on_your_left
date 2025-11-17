@@ -9,21 +9,35 @@ max-visits: 1
 
 = Confronting Antisemitism
 
-Antisemitism has long been a latent feature of German society, but since the beginning of the economic depression, it has grown to a horrifying extent. The Nazis are the worst of it, but all the right-wing parties are deeply antisemitic. Regarding the SPD specifically, our right-wing enemies love to deploy their racist rhetoric against our many Jewish comrades, magnifying criticism of any minor transgression, and they call the entire SPD a Jewish party. We are a favorite target of their invectives.
+Antisemitism has long been a latent feature of German society, but since the beginning of the economic depression, it has grown to a horrifying extent. The Nazis are the worst of it, but all the right-wing parties are deeply antisemitic. Regarding the SPD specifically, our right-wing enemies love to deploy their racist rhetoric against our many Jewish comrades, magnifying criticism of any minor transgression, and they call the entire SPD a Jewish party. 
 
-- @socialism_of_fools: Antisemitism is the "socialism of fools". We will defeat them with real socialism.
-- @if: Antisemitism is a crisis. Direct the full force of the Iron Front against antisemitism.
-- @all: All Germans will suffer from fascism, not just the Jews. We do not need a separate policy for them.
+- @nothing: Our answer is, as always, to do nothing.
+- @embrace: Yes, we must become a Jewish party!
+- @if: We must build additional support before becoming a Jewish party.
+- @histori: These accusations are baseless and we have proof to the contrary!
+- @all: All Germans will suffer from fascism, not just the Jews. 
 
-@socialism_of_fools
 
-The best policy to deal with this sort of irrational, senseless hatred is to ignore it. Few are swayed by racist rhetoric; the best way to combat it is to provide economic security so that people do not turn to antisemitism.
+@histori
+
+We remind our accusers that in 1923, our own newspaper, Vorwärts, had accused Adolf Hitler of being funded by American Jews and Henry Ford. Although we had lost the resulting libel trial and had to pay Hitler 6 million marks, that incident is sufficient proof that our right-wing enemies' accusations of SPD being a Jewish party are unfounded.
+
+@nothing
+
+Much like with everything else, the best policy to deal with this sort of irrational, senseless hatred is to ignore it. 
 
 @if
 on-arrival: confronting_antisemitism += 2; sa_strength -= 20; democratization += 1; pacifism += 1; nationalism -= 5*(1-dissent); workers_nsdap -= 6*(1-dissent);
 
-We develop an entire campaign against antisemitism under the auspices of the Iron Front. Hopefully our campaign can sway the workers away from Nazism.
+We develop an entire campaign against antisemitism. Hopefully our campaign can sway the workers.
+
+@embrace
+choose-if: 1 == 0
+unavailable-subtitle: We do not yet have sufficient support for this.
+
+> *"But of course, it would be a tremendous mistake to think..."*
+ - Vladimir Lenin, *Complete Collection of Works*, v. 42, p. 74
 
 @all
 
-We do not need any special treatment for minorities.
+Is this a threat? Or a promise?
